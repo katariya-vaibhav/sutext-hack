@@ -6,9 +6,13 @@ const feedbackSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    // user: {
+    //   type: mongoose.Schema.Types.ObjectId,
+    //   ref: "User",
+    // },
     user: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "User",
+      type: String,
+      required: true,
     },
     department: {
       type: String,

@@ -2,12 +2,12 @@ import { Feedback } from "../model/feedback.model.js";
 
 const createFeedback = async (req, res) => {
   try {
-    const { feedback, department } = req.body;
-    const user = req.user._id;
+    const { feedback, department , username } = req.body;
+    // const user = req.user._id;
 
     const newFeedback = new Feedback({
       feedback,
-      user,
+      user: username,
       department,
     });
 
